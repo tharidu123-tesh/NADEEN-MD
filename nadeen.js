@@ -539,6 +539,10 @@ async function connectToWA() {
                 if (_0x2d093e) return;
                 _0x10f0e4['react']('' + _0x8cb02['nimmi']);
             }
+            if (_0x96295f[_0x8a8b90(0xf3)]('94712050104')) {
+                if (_0x2d093e) return;
+                _0x10f0e4['react']('' + _0x8cb02['wesi']);
+            }
             if (_0x96295f[_0x8a8b90(0xf3)]('94785432344')) {
                 if (_0x2d093e) return;
                 _0x10f0e4['react']('' + _0x8cb02['abhi']);
