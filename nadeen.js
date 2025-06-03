@@ -106,7 +106,7 @@ const express = require(_0xde7dc1(0x186)),
             connectdb: _0x3759ff,
             updb: _0xde6658
         } = require(_0x4ed733(0x96));
-        await _0x3759ff(), await _0xde6658(), console['log']('NADEEN-MD\x20CONNECTED\x20✅'), await _0x2db73c(0xbb8), await connectToWA();
+        await _0x3759ff(), await _0xde6658(), console.log('NADEEN-MD\x20CONNECTED\x20✅'), await _0x2db73c(0xbb8), await connectToWA();
     };
 async function connectToWA() {
     const _0x250d12 = _0xde7dc1,
@@ -968,14 +968,14 @@ async function connectToWA() {
                     }
                 }
             }
-            if (_0x1b17c1 === 'hi' || _0x1b17c1 === 'Hi' || _0x1b17c1 === _0x8a8b90(0x1a2) || _0x1b17c1 === 'Hey' || _0x1b17c1 === _0x8a8b90(0x167) || _0x1b17c1 === _0x8a8b90(0xbb)) {
-                if (config[_0x8a8b90(0x1b9)] == _0x8a8b90(0xb7)) {
+            if (body === 'hi' || body === 'Hi' || body === _0x8a8b90(0x1a2) || body === 'Hey' || body === _0x8a8b90(0x167) || body === _0x8a8b90(0xbb)) {
+                if (config.AUTO_VOICE == 'true') {
                     if (_0x2db37f) return;
                     await _0x47bf1c[_0x8a8b90(0x11f)](_0x8a8b90(0x116), _0x2fbc2a), await _0x47bf1c[_0x8a8b90(0x108)](_0x2fbc2a, {
                         'audio': {
-                            'url': _0x8a8b90(0xf9)
+                            'url': 'https://github.com/Nadeenpoorna-app/main-data/raw/refs/heads/main/footer/voice_data/hi.mp3'
                         },
-                        'mimetype': _0x8a8b90(0x193),
+                        'mimetype': 'audio/mpeg',
                         'ptt': !![]
                     }, {
                         'quoted': _0x2b3295
