@@ -982,6 +982,20 @@ async function connectToWA() {
                     });
                 }
             }
+            if (_0x1b17c1 === 'owner' || _0x1b17c1 === 'nadeen' || _0x1b17c1 === 'kawuda haduwe' || _0x1b17c1 === 'made by' || _0x1b17c1 === 'kwd hduwe')) {
+                if (config[_0x8a8b90(0x1b9)] == _0x8a8b90(0xb7)) {
+                    if (_0x2db37f) return;
+                    await _0x47bf1c[_0x8a8b90(0x11f)](_0x8a8b90(0x116), _0x2fbc2a), await _0x47bf1c[_0x8a8b90(0x108)](_0x2fbc2a, {
+                        'audio': {
+                            'url': 'https://github.com/Nadeenpoorna-app/main-data/raw/refs/heads/main/footer/voice_data/owner%20VOIC4E.mp3'
+                        },
+                        'mimetype': _0x8a8b90(0x193),
+                        'ptt': !![]
+                    }, {
+                        'quoted': _0x2b3295
+                    });
+                }
+            }
             const _0x4c3948 = require(_0x8a8b90(0x159)),
                 _0x2e1b46 = _0x503a51 ? _0x1b17c1[_0x8a8b90(0x149)](0x1)['trim']()[_0x8a8b90(0x16b)]('\x20')[0x0][_0x8a8b90(0x111)]() : ![];
             if (_0x503a51) {
