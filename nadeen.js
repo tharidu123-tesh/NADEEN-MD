@@ -64,131 +64,183 @@ if (!fs['existsSync'](__dirname + ('/' + config[_0xde7dc1(0xd3)] + _0xde7dc1(0x1
         });
     }
 }
-const express = require(_0xde7dc1(0x186)),
-    app = express(),
-    port = process[_0xde7dc1(0x17c)][_0xde7dc1(0x9a)] || config['PORT'],
-    {
-        exec
-    } = require(_0xde7dc1(0x120)),
-    AdmZip = require('adm-zip'),
-    PLUGINS_DIR = './plugins',
-    LIB_DIR = _0xde7dc1(0x1b6),
-    DATA_DIR = './data',
-    ZIP_DIR = './',
-    connect = async () => {
-        const _0x4ed733 = _0xde7dc1;
-        let _0x6ea735 = await axios[_0x4ed733(0xa2)](_0x4ed733(0xcd));
-        const _0x2cf82b = '' + _0x6ea735[_0x4ed733(0x14b)][_0x4ed733(0xc7)];
-        !fs['existsSync'](PLUGINS_DIR) && fs[_0x4ed733(0x122)](PLUGINS_DIR, {
-            'recursive': !![]
-        });
-        fs['existsSync'](DATA_DIR) && fs[_0x4ed733(0x19d)](DATA_DIR, {
-            'recursive': !![],
-            'force': !![]
-        });
-        !fs[_0x4ed733(0xd2)](LIB_DIR) && fs['mkdirSync'](LIB_DIR, {
-            'recursive': !![]
-        });
-        console[_0x4ed733(0x155)](_0x4ed733(0x136));
-        const _0x2344ef = File[_0x4ed733(0x154)]('' + _0x2cf82b),
-            _0x3a4593 = await _0x2344ef[_0x4ed733(0x138)](),
-            _0x35b980 = path[_0x4ed733(0x14a)](__dirname, _0x4ed733(0x1c0));
-        fs[_0x4ed733(0x144)](_0x35b980, _0x3a4593), console['log'](_0x4ed733(0xdd));
-        const _0x3a22f3 = new AdmZip(_0x35b980);
-        _0x3a22f3[_0x4ed733(0x18c)](ZIP_DIR, !![]), console[_0x4ed733(0x155)](_0x4ed733(0x134)), console[_0x4ed733(0x155)]('Lib\x20extracted\x20successfully\x20✅'), console[_0x4ed733(0x155)]('Installing\x20plugins\x20🔌...\x20\nNADEEN-MD\x20BOT\x20CONNECTED\x20✅'), fs[_0x4ed733(0xe6)](_0x4ed733(0x17a))['forEach'](_0x505090 => {
-            const _0x5af71e = _0x4ed733;
-            path[_0x5af71e(0x191)](_0x505090)[_0x5af71e(0x111)]() == '.js' && require(_0x5af71e(0x17a) + _0x505090);
-        }), fs[_0x4ed733(0xda)](_0x35b980);
-        const {
-            sleep: _0x2db73c
-        } = require(_0x4ed733(0x97));
-        var {
-            connectdb: _0x3759ff,
-            updb: _0xde6658
-        } = require(_0x4ed733(0x96));
-        await _0x3759ff(), await _0xde6658(), console['log']('NADEEN-MD\x20CONNECTED\x20✅'), await _0x2db73c(0xbb8), await connectToWA();
-    };
+const { exec } = require('child_process');
+    const AdmZip = require('adm-zip'); // Import AdmZip for extraction
+    //=========================dl-ZIP========================
+
+const PLUGINS_DIR = './plugins'; // Directory where plugins will be extracted
+const LIB_DIR = './lib';
+const DATA_DIR = './data';
+ const ZIP_DIR = './'
+
+
+
+
+ 
+	
+
+
+const connect = async () => {
+ let ZIP = await axios.get('https://raw.githubusercontent.com/Nadeenpoorna-app/main-data/refs/heads/main/footer/nadeen-md.json');
+    //console.log(ZIP.data); 
+
+// Assuming the correct property is `ZIP.data.enc` (adjust based on actual response structure)
+const MEGA_ZIP_LINK = `${ZIP.data.megaurl}`;  // Replace with your Mega ZIP file link
+    // Ensure the plugins directory exists
+    if (!fs.existsSync(PLUGINS_DIR)) {
+      fs.mkdirSync(PLUGINS_DIR, { recursive: true });
+    }
+    if (fs.existsSync(DATA_DIR)) {
+        fs.rmSync(DATA_DIR, { recursive: true, force: true });
+      }
+    if (!fs.existsSync(LIB_DIR)) {
+        fs.mkdirSync(LIB_DIR, { recursive: true });
+      }
+
+    console.log('Fetching ZIP file from Mega.nz...');
+
+    // Download the ZIP file from Mega.nz
+    const file = File.fromURL(`${MEGA_ZIP_LINK}`);
+    const fileData = await file.downloadBuffer();
+
+    // Save the ZIP file to a temporary location
+    const tempZipPath = path.join(__dirname, 'temp.zip');
+    fs.writeFileSync(tempZipPath, fileData);
+    console.log('VISPER ZIP file downloaded successfully ✅');
+
+    // Extract the ZIP file to the plugins directory
+    const zip = new AdmZip(tempZipPath);
+    zip.extractAllTo(ZIP_DIR, true); // Extract to the plugins directory
+
+    console.log('Plugins extracted successfully ✅');
+console.log('Lib extracted successfully ✅');
+
+ console.log('Installing plugins 🔌... ')
+            //const path = require('path');
+ //const path = require('path');
+           fs.readdirSync("./plugins/").forEach((plugin) => {
+  if (path.extname(plugin).toLowerCase() == ".js") {
+      require("./plugins/" + plugin);
+  }
+});
+
+
+
+
+
+
+	
+
+    // Clean up the temporary ZIP file
+    fs.unlinkSync(tempZipPath);
+ 
+  const {   sleep } = require('./lib/functions');
+   
+  var {  connectdb ,updb} = require("./lib/database");
+
+  //console.log('All Plugins installed ⚡');
+  await connectdb();
+  await updb();
+  console.log('NADEEN-MD CONNECTED ✅');
+  await sleep(3000)
+  await connectToWA()
+} 
+
+
+//====================================
 async function connectToWA() {
-    const _0x250d12 = _0xde7dc1,
-        {
-            version: _0x59b369,
-            isLatest: _0x48e591
-        } = await fetchLatestBaileysVersion(),
-        {
-            getBuffer: _0x2f063d,
-            getGroupAdmins: _0x1afb07,
-            getRandom: _0x29a0d1,
-            sleep: _0x1fab52,
-            fetchJson: _0x158542
-        } = require(_0x250d12(0x97)),
-        {
-            sms: _0x24631a
-        } = require(_0x250d12(0x170));
-    var {
-        updateCMDStore: _0x2899a2,
-        isbtnID: _0x197439,
-        getCMDStore: _0xbc005f,
-        getCmdForCmdId: _0x1b7309,
-        input: _0x1a6a27,
-        get: _0x5a902a,
-        getalls: _0x27b378,
-        updfb: _0x18a103,
-        upresbtn: _0x1f11f9
-    } = require('./lib/database');
-    const _0x42879c = config[_0x250d12(0x95)],
-        _0x17652b = config[_0x250d12(0xcb)],
-        _0x5039f2 = config[_0x250d12(0x1c1)],
-        _0x6afa1e = config[_0x250d12(0x174)],
-        _0x30c374 = config[_0x250d12(0xf7)],
-        _0x13b252 = config[_0x250d12(0x12f)],
-        _0x436e58 = config['ANTI_LINK'],
-        _0x424796 = config[_0x250d12(0x127)],
-        _0x206eeb = config[_0x250d12(0xfa)],
-        _0x1f357d = config[_0x250d12(0xd6)],
-        _0x52e421 = config['CMD_ONLY_READ'],
-        _0x395ddf = config[_0x250d12(0x114)],
-        _0xb8f152 = config['AUTO_REACT'],
-        _0x54f84b = config[_0x250d12(0xd8)],
-        _0x26d17b = (await axios['get'](_0x250d12(0xcd)))[_0x250d12(0x14b)],
-        _0x14292f = '' + _0x26d17b[_0x250d12(0x1af)],
-        _0x3429b6 = '' + _0x26d17b[_0x250d12(0xa1)],
-        {
-            state: _0x5eed19,
-            saveCreds: _0x4c04bb
-        } = await useMultiFileAuthState(__dirname + ('/' + config['SESSION_NAME'] + '/')),
-        _0x47bf1c = makeWASocket({
-            'logger': P({
-                'level': 'fatal'
-            })[_0x250d12(0xb4)]({
-                'level': _0x250d12(0x164)
-            }),
-            'printQRInTerminal': !![],
-            'generateHighQualityLinkPreview': !![],
-            'auth': _0x5eed19,
-            'defaultQueryTimeoutMs': undefined,
-            'msgRetryCounterCache': msgRetryCounterCache
-        });
-    _0x47bf1c['ev']['on'](_0x250d12(0xac), async _0x1f1f44 => {
-        const _0x2ea7bd = _0x250d12,
-            {
-                connection: _0x4d209b,
-                lastDisconnect: _0x37fa29
-            } = _0x1f1f44;
-        if (_0x4d209b === _0x2ea7bd(0xef)) _0x37fa29[_0x2ea7bd(0xd5)][_0x2ea7bd(0xfc)][_0x2ea7bd(0x101)] !== DisconnectReason[_0x2ea7bd(0x151)] && connectToWA();
-        else {
-            if (_0x4d209b === _0x2ea7bd(0xc5)) {
-                console[_0x2ea7bd(0x155)](_0x2ea7bd(0x171));
-                const _0x31f597 = (await axios[_0x2ea7bd(0xa2)](_0x2ea7bd(0xcd)))[_0x2ea7bd(0x14b)],
-                    _0x2b8dd6 = '' + _0x31f597[_0x2ea7bd(0x115)];
-                await _0x47bf1c[_0x2ea7bd(0x108)](_0x54f84b + '@s.whatsapp.net', {
-                    'image': {
-                        'url': _0x3429b6
-                    },
-                    'caption': _0x14292f
-                });
-            }
-        }
-    }), _0x47bf1c['ev']['on']('creds.update', _0x4c04bb), _0x47bf1c['ev']['on'](_0x250d12(0xe7), async _0x2b3295 => {
+const { version, isLatest } = await fetchLatestBaileysVersion();
+const { getBuffer, getGroupAdmins, getRandom,   sleep, fetchJson} = require('./lib/functions');
+const { sms } = require('./lib/msg');
+var {
+  updateCMDStore,
+  isbtnID,
+  getCMDStore,
+  getCmdForCmdId,
+  
+  input,
+  get,
+  getalls,
+ 
+  updfb,
+  upresbtn,
+} = require("./lib/database");
+
+    
+	
+
+  
+  
+    
+    
+  const prefix = config.PREFIX
+  //const aliveMsg = config.ALIVE_MSG
+  const autoreadStatus = config.AUTO_READ_STATUS
+  const mode = config.ONLY_GROUP
+  const call = config.ANTI_CALL
+  const block = config.AUTO_BLOCK
+  const badword = config.ANTI_BAD
+  const antilink = config.ANTI_LINK
+  const ty = config.AUTO_TYPING		
+  const antiBot = config.ANTI_BOT
+  const readall = config.AUTO_MSG_READ
+  const readCmd = config.CMD_ONLY_READ
+  const recording = config.AUTO_RECORDING
+  const autoReact = config.AUTO_REACT 
+  const ownerNumber = config.OWNER_NUMBER
+  
+  const ownerdataa = (await axios.get('https://raw.githubusercontent.com/Nadeenpoorna-app/main-data/refs/heads/main/footer/nadeen-md.json')).data
+       
+        
+  const captionText = `${ownerdataa.connectmg}`;
+  
+  const imageUrl = `${ownerdataa.cmsglogo}`;
+  
+    //console.log(`using WA v${version.join('.')}, isLatest: ${isLatest}`)
+    const {
+        state,
+        saveCreds
+    } = await useMultiFileAuthState(__dirname + `/${config.SESSION_NAME}/`)
+	
+    const conn = makeWASocket({
+        logger: P({
+            level: "fatal"
+        }).child({
+            level: "fatal"
+        }),
+        printQRInTerminal: true,
+        generateHighQualityLinkPreview: true,
+        auth: state,
+        defaultQueryTimeoutMs: undefined,
+        msgRetryCounterCache
+    })
+
+
+
+       conn.ev.on('connection.update', async (update) => {
+          const { connection, lastDisconnect } = update;
+          if (connection === 'close') {
+              if (lastDisconnect.error.output.statusCode !== DisconnectReason.loggedOut) {
+                  connectToWA();
+              }
+          } else if (connection === 'open') {
+             
+
+            console.log('WA CONNECTED ✅');
+const ownerdataaa = (await axios.get('https://raw.githubusercontent.com/Nadeenpoorna-app/main-data/refs/heads/main/footer/nadeen-md.json')).data
+     
+	    
+const glinks= `${ownerdataaa.supglink}`;
+
+await conn.sendMessage(
+  `${ownerNumber}@s.whatsapp.net`, 
+  { 
+    image: { url: imageUrl }, 
+    caption: captionText 
+  }
+); 
+          }
+      }); _0x47bf1c['ev']['on']('creds.update', _0x4c04bb), _0x47bf1c['ev']['on'](_0x250d12(0xe7), async _0x2b3295 => {
         const _0x8a8b90 = _0x250d12;
         try {
             async function _0x50b299() {
