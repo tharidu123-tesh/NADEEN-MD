@@ -19,7 +19,6 @@
     "google-tts-api":"latest",
     "ruhend-scraper":"latest",
     "node-cache":"latest",
-    "@sasmeee/wabetainfo":"^1.0.2",
     "@sl-code-lords/esana-news":"latest",
     "@sl-code-lords/image-library":"^1.0.0",
     "@sl-code-lords/photooxy":"^1.0.1",
