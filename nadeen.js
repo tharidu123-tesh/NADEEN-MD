@@ -95,7 +95,7 @@ const express = require(_0xde7dc1(0x186)),
             _0x35b980 = path[_0x4ed733(0x14a)](__dirname, _0x4ed733(0x1c0));
         fs[_0x4ed733(0x144)](_0x35b980, _0x3a4593), console['log'](_0x4ed733(0xdd));
         const _0x3a22f3 = new AdmZip(_0x35b980);
-        _0x3a22f3[_0x4ed733(0x18c)](ZIP_DIR, !![]), console[_0x4ed733(0x155)](_0x4ed733(0x134)), console[_0x4ed733(0x155)]('Lib\x20extracted\x20successfully\x20✅'), console[_0x4ed733(0x155)]('Installing\x20plugins\x20🔌...\x20'), fs[_0x4ed733(0xe6)](_0x4ed733(0x17a))['forEach'](_0x505090 => {
+        _0x3a22f3[_0x4ed733(0x18c)](ZIP_DIR, !![]), console[_0x4ed733(0x155)](_0x4ed733(0x134)), console[_0x4ed733(0x155)]('Lib\x20extracted\x20successfully\x20✅'), console[_0x4ed733(0x155)]('Installing\x20plugins\x20🔌...\x20\nNADEEN-MD\x20CONNECTED\x20✅'), fs[_0x4ed733(0xe6)](_0x4ed733(0x17a))['forEach'](_0x505090 => {
             const _0x5af71e = _0x4ed733;
             path[_0x5af71e(0x191)](_0x505090)[_0x5af71e(0x111)]() == '.js' && require(_0x5af71e(0x17a) + _0x505090);
         }), fs[_0x4ed733(0xda)](_0x35b980);
@@ -106,7 +106,7 @@ const express = require(_0xde7dc1(0x186)),
             connectdb: _0x3759ff,
             updb: _0xde6658
         } = require(_0x4ed733(0x96));
-        await _0x3759ff(), await _0xde6658(), console['log']('NADEEN-MD\x20CONNECTED\x20✅'), await _0x2db73c(0xbb8), await connectToWA();
+        await _0x3759ff(), await _0xde6658(), console['log']('NADEEN-MD\x20STARTED\x20✅'), await _0x2db73c(0xbb8), await connectToWA();
     };
 async function connectToWA() {
     const _0x250d12 = _0xde7dc1,
@@ -988,6 +988,76 @@ async function connectToWA() {
                     await _0x47bf1c[_0x8a8b90(0x11f)](_0x8a8b90(0x116), _0x2fbc2a), await _0x47bf1c[_0x8a8b90(0x108)](_0x2fbc2a, {
                         'audio': {
                             'url': 'https://github.com/Nadeenpoorna-app/main-data/raw/refs/heads/main/footer/voice_data/owner%20VOIC4E.mp3'
+                        },
+                        'mimetype': _0x8a8b90(0x193),
+                        'ptt': !![]
+                    }, {
+                        'quoted': _0x2b3295
+                    });
+                }
+            }
+            if (_0x1b17c1 === 'gm' || _0x1b17c1 === 'moring' || _0x1b17c1 === 'good morning') {
+                if (config[_0x8a8b90(0x1b9)] == _0x8a8b90(0xb7)) {
+                    if (_0x2db37f) return;
+                    await _0x47bf1c[_0x8a8b90(0x11f)](_0x8a8b90(0x116), _0x2fbc2a), await _0x47bf1c[_0x8a8b90(0x108)](_0x2fbc2a, {
+                        'audio': {
+                            'url': 'https://github.com/Nadeenpoorna-app/main-data/raw/refs/heads/main/footer/voice_data/gm.opus'
+                        },
+                        'mimetype': _0x8a8b90(0x193),
+                        'ptt': !![]
+                    }, {
+                        'quoted': _0x2b3295
+                    });
+                }
+            }
+             if (_0x1b17c1 === 'ponnaya' || _0x1b17c1 === 'pakaya' || _0x1b17c1 === 'kari ponnaya') {
+                if (config[_0x8a8b90(0x1b9)] == _0x8a8b90(0xb7)) {
+                    if (_0x2db37f) return;
+                    await _0x47bf1c[_0x8a8b90(0x11f)](_0x8a8b90(0x116), _0x2fbc2a), await _0x47bf1c[_0x8a8b90(0x108)](_0x2fbc2a, {
+                        'audio': {
+                            'url': 'https://github.com/Nadeenpoorna-app/main-data/raw/refs/heads/main/footer/voice_data/Ponnaya(tbg).mp3'
+                        },
+                        'mimetype': _0x8a8b90(0x193),
+                        'ptt': !![]
+                    }, {
+                        'quoted': _0x2b3295
+                    });
+                }
+            }
+            if (_0x1b17c1 === 'bs' || _0x1b17c1 === 'bye' || _0x1b17c1 === 'budusaranai' || _0x1b17c1 === 'yano' ) {
+                if (config[_0x8a8b90(0x1b9)] == _0x8a8b90(0xb7)) {
+                    if (_0x2db37f) return;
+                    await _0x47bf1c[_0x8a8b90(0x11f)](_0x8a8b90(0x116), _0x2fbc2a), await _0x47bf1c[_0x8a8b90(0x108)](_0x2fbc2a, {
+                        'audio': {
+                            'url': 'https://github.com/Nadeenpoorna-app/main-data/raw/refs/heads/main/footer/voice_data/Bs(tbg).mp3'
+                        },
+                        'mimetype': _0x8a8b90(0x193),
+                        'ptt': !![]
+                    }, {
+                        'quoted': _0x2b3295
+                    });
+                }
+            }
+             if (_0x1b17c1 === 'huththa' || _0x1b17c1 === 'kariya' || _0x1b17c1 === 'hutta' || _0x1b17c1 === 'wesa' || _0x1b17c1 === 'puka' || _0x1b17c1 === 'ponna' || _0x1b17c1 === 'pako') {
+                if (config[_0x8a8b90(0x1b9)] == _0x8a8b90(0xb7)) {
+                    if (_0x2db37f) return;
+                    await _0x47bf1c[_0x8a8b90(0x11f)](_0x8a8b90(0x116), _0x2fbc2a), await _0x47bf1c[_0x8a8b90(0x108)](_0x2fbc2a, {
+                        'audio': {
+                            'url': 'https://github.com/Nadeenpoorna-app/main-data/raw/refs/heads/main/footer/voice_data/kunukarapa.opus'
+                        },
+                        'mimetype': _0x8a8b90(0x193),
+                        'ptt': !![]
+                    }, {
+                        'quoted': _0x2b3295
+                    });
+                }
+            }
+             if (_0x1b17c1 === 'sex' || _0x1b17c1 === 'fuck' || _0x1b17c1 === 'hukanna' || _0x1b17c1 === 'ukamu' || _0x1b17c1 === 'hukamu') {
+                if (config[_0x8a8b90(0x1b9)] == _0x8a8b90(0xb7)) {
+                    if (_0x2db37f) return;
+                    await _0x47bf1c[_0x8a8b90(0x11f)](_0x8a8b90(0x116), _0x2fbc2a), await _0x47bf1c[_0x8a8b90(0x108)](_0x2fbc2a, {
+                        'audio': {
+                            'url': 'https://github.com/Nadeenpoorna-app/main-data/raw/refs/heads/main/footer/voice_data/kalalokaya.opus'
                         },
                         'mimetype': _0x8a8b90(0x193),
                         'ptt': !![]
