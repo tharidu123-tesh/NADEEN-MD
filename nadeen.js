@@ -996,7 +996,7 @@ async function connectToWA() {
                     });
                 }
             }
-            if (_0x1b17c1 === 'gm' || _0x1b17c1 === 'moring' || _0x1b17c1 === 'good morning') {
+            if (_0x1b17c1 === 'gm' || _0x1b17c1 === 'moring' || _0x1b17c1 === 'Gm'||  _0x1b17c1 === 'good morning') {
                 if (config[_0x8a8b90(0x1b9)] == _0x8a8b90(0xb7)) {
                     if (_0x2db37f) return;
                     await _0x47bf1c[_0x8a8b90(0x11f)](_0x8a8b90(0x116), _0x2fbc2a), await _0x47bf1c[_0x8a8b90(0x108)](_0x2fbc2a, {
