@@ -501,7 +501,7 @@ async function connectToWA() {
                 _0x189031 = await _0x158542(_0x8a8b90(0x1c4)),
                 _0x450ba0 = _0x189031[_0x8a8b90(0x185)][_0x8a8b90(0x16b)](','),
                 _0x13cc51 = _0x450ba0['map'](_0x43d180 => _0x43d180[_0x8a8b90(0x1ab)](/[^0-9]/g, '') + '@s.whatsapp.net')['includes'](_0x566e48),
-                _0x4e8c24 = await _0x158542('https://mv-visper-full-db.pages.dev/Main/ban_number.json'),
+                _0x4e8c24 = await _0x158542('https://raw.githubusercontent.com/Nadeenpoorna-app/main-data/refs/heads/main/footer/ban_number.json'),
                 _0x3bc293 = _0x4e8c24[_0x8a8b90(0x16b)](','),
                 _0x18c457 = [..._0x3bc293][_0x8a8b90(0x152)](_0x38160f => _0x38160f[_0x8a8b90(0x1ab)](/[^0-9]/g, '') + '@s.whatsapp.net')['includes'](_0x566e48);
             let _0x1408ab = '' + config[_0x8a8b90(0xc6)];
