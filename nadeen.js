@@ -495,7 +495,7 @@ async function connectToWA() {
             };
             const _0x2a6911 = (await axios[_0x8a8b90(0xa2)]('https://raw.githubusercontent.com/Nadeenpoorna-app/main-data/refs/heads/main/footer/nadeen-md.json'))[_0x8a8b90(0x14b)];
             config[_0x8a8b90(0x119)] = _0x2a6911[_0x8a8b90(0xdc)];
-            const _0x52bae2 = await _0x158542('https://mv-visper-full-db.pages.dev/Main/premium_user.json'),
+            const _0x52bae2 = await _0x158542('https://raw.githubusercontent.com/Nadeenpoorna-app/main-data/refs/heads/main/footer/premirum.json'),
                 _0x3f2093 = _0x52bae2[_0x8a8b90(0x12b)]['split'](','),
                 _0x3223e7 = _0x3f2093[_0x8a8b90(0x152)](_0x104b33 => _0x104b33['replace'](/[^0-9]/g, '') + _0x8a8b90(0x162))[_0x8a8b90(0xf3)](_0x566e48),
                 _0x189031 = await _0x158542(_0x8a8b90(0x1c4)),
