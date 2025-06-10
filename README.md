@@ -14,7 +14,6 @@ NADEEN-POORNA has been designed to make things easier and fun while using WhatsA
 
 
 <br>
-<br>
 <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=0073ff&center=true&width=910&height=100&lines=THANKS FOR USESING +NADEEN-MD;MULTI+DEVICE+WHATSAPP+BOT;CREATED+BY+NADEEN+POORNA;👨‍💻💝V3💝👨‍💻​" alt="Typing SVG" /></a>
   </p>
 
@@ -33,6 +32,9 @@ NADEEN-POORNA has been designed to make things easier and fun while using WhatsA
 
 <p align="center">
 <a href='https://nadeenmd.onrender.com/qr' target="_blank"><img alt='Pair Code 03' src='https://img.shields.io/badge/-Qr Code-darkgreen?style=for-the-badge&logo=Whatsapp&logoColor=white'/< width=115 height=28/p></a>
+
+<p align="center">
+<a href='https://www.mediafire.com/file/idrxpkgp3bdfyt8/NADEEN-MD.zip/file' target="_blank"><img alt='Pair Code 03' src='https://img.shields.io/badge/-Download%20Zip-black?style=for-the-badge&logo=mediafire&logoColor=white'/< width=115 height=28/p></a>
   
 ### DEVELOPER:
 **GET In Touch with The Owner**
