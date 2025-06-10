@@ -5,8 +5,8 @@ NADEEN-POORNA has been designed to make things easier and fun while using WhatsA
 
 <br>
 <p align="center">  
-  <a href="https://files.catbox.moe/3mvn78.png">
-    <img alt="nadeen-md" height="300" src="https://files.catbox.moe/3mvn78.png">
+  <a href="https://files.catbox.moe/79bgkk.jpg">
+    <img alt="nadeen-md" height="300" src="https://files.catbox.moe/79bgkk.jpg">
     
   
   </a>
