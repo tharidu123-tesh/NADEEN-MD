@@ -14,8 +14,9 @@ NADEEN-POORNA has been designed to make things easier and fun while using WhatsA
 
 
 <br>
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=50&pause=1000&color=0073ff&center=true&width=910&height=100&lines=THANKS FOR USESING +NADEEN-MD;MULTI+DEVICE+WHATSAPP+BOT;CREATED+BY+NADEEN+POORNA;👨‍💻💝V3💝👨‍💻​" alt="Typing SVG" /></a>
-  </p>
+<p align="center">
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=33&pause=1000&color=5513F7&width=435&lines=NADEEN+MD+WHATSAPP+BOT+V3" alt="Typing SVG" /></a>
+</p>
 
 ## 🇱🇰 ***New bot, latest version 🎉 [new reposity](https://github.com/NADEENbotx/NADEEN-MD)***
 
@@ -57,9 +58,6 @@ NADEEN-POORNA has been designed to make things easier and fun while using WhatsA
 <p align="center">
 <a href='https://www.youtube.com/watch?v=S-YOOsTvteE&t=17s' target="_blank"><img alt='GET free deploy' src='https://img.shields.io/badge/-Watch Free Deploy-darkred?style=for-the-badge&logo=Youtube&logoColor=white'/< width=115 height=28/p></a>
 
-<h3 align="center">DEPLOY CODE ⤵</h3>
-<p align="center">
-<a href='https://whatsapp.com/channel/0029VagN2qW3gvWUBhsjcn3I/238'&t=17s' target="_blank"><img alt='GET free deploy' src='https://img.shields.io/badge/-Free Deploy Code-darkblue?style=for-the-badge&logo=Javascript&logoColor=white'/< width=115 height=28/p></a>
 
 <h2 align="center">𝗗𝗘𝗣𝗟𝗢𝗬𝗠𝗘𝗡𝗧 𝗠𝗘𝗧𝗛𝗢𝗗𝗦</h2>
 
@@ -82,7 +80,45 @@ NADEEN-POORNA has been designed to make things easier and fun while using WhatsA
 <p align="center">
 <a href='[https://github.com/Nadeenpoorna-lkz/NADEEN-MD](https://github.com/NADEENbotx/NADEEN-MD)/blob/main/deploy-on-vps.md' target="_blank"><img alt='Vps' src='https://img.shields.io/badge/-Vps Deploy-blue?style=for-the-badge&logo=Vps&logoColor=white'/< width=150 height=28/p></a> <h6>
 
-  
+ ## Workflow Deploy Code 👇
+
+
+```
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Start application
+      run: npm start
+```
+ 
 
   </a>
 </p>  
